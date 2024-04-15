@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--fontawesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <!--OwlCarousel2-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <title>理周教育學苑</title>
+    <style>
+        .nav-tabs {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav>li {
+            float: none;
+            display: inline-block;
+        }
+
+        .nav>li>a {
+            margin-right: 5px;
+        }
+
+        .new_class {
+            position: absolute;
+            background-color: white;
+
+        }
+
+        .new_class_font {
+            color: #ec5355;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--標題列-->
+    <div class="wrapper" style="width: 100%;">
+        <div class="row">
+            <div class="col-lg-4">
+                <div>
+                    <a href="C:/Users/sasac/Downloads/match/教育/code/index.html">
+                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/logo.png">
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        理財課程 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">成人理財</a></li>
+                        <li><a href="#" class="dropdown-item">線上影音</a></li>
+                        <li><a href="#" class="dropdown-item">兒童材商</a></li>
+                    </ul>
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">確認</button>
+                    </span>
+                </div>
+            </div>
+            <!--  -->
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <div class="icon-bar">
+                        <a href="#"><i class="fa-solid fa-film"></i>我的課程</a>
+                        <a href="#"><i class="fa-solid fa-user"></i>會員中心</a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></i>購物車</a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i>定期定額</a>
+                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i>登出會員</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--選單 -->
+        <div>
+            <ul class="nav nav-tabs">
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">理周講師</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">理財課程<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">成人理財</a></li>
+                        <li><a href="#">線上影音</a></li>
+                        <li><a href="#">兒童材商</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">數位訂閱</a></li>
+                <li><a href="#">理周嚴選</a></li>
+            </ul>
+        </div>
+        <div style="width: 99%;background-color:#ec5355;">
+            <!--輪播-->
+            <div style="width: 100%;">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                
+                      <div class="item active">
+                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/banner_1.jpg"  style="width:100%;">
+                      </div>
+                
+                      <div class="item">
+                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/banner_1.jpg"  style="width:100%;">
+                      </div>
+                    
+                      <div class="item">
+                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/banner_1.jpg"  style="width:100%;">
+                      </div>
+                  
+                    </div>
+                
+                    <!-- 按鈕 -->
+                    <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a> -->
+
+                  </div>
+                </div>
+
+            </div> 
+
+        </div>
+        <!--最新消息輪播-->
+        <div class="new_class" style="width: 100%;">
+            <!--最新課程-->
+            <div class="new_class_font">
+                <h3>最新 課程</h3>
+            </div>
+
+            <!--熱門課程-->
+            <div>
+                <div class="owl-carousel-best owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="">
+                            <img src="C:/Users/sasac/Downloads/match/教育/code/img/活動BN2024-36.jpg">
+                            <h3 style="color: black;">室內裝潢自己的家，零經驗也能上手</h3>
+                            <br>
+                            <table style="width:210px;">
+                                <tr>
+                                    <td>by<span>名字</span></td>
+                                    <td align='right'><i class="fa-solid fa-film"></i><span>90</span>天</td>
+                                </tr>
+                                <tr>
+                                    <td> <button class="btn btn-default btn-xs">立即上課</button></td>
+                                    <td align='right'>
+                                        <h4 style="color: red;">NT1,000</h4>
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <img src="C:/Users/sasac/Downloads/match/教育/code/img/活動BN2024-19.jpg">
+                            <h3 style="color: black;">室內裝潢自己的家，零經驗也能上手</h3>
+                            <br>
+                            <table style="width:210px;">
+                                <tr>
+                                    <td>by<span>名字</span></td>
+                                    <td align='right'><i class="fa-solid fa-film"></i><span>90</span>天</td>
+                                </tr>
+                                <tr>
+                                    <td> <button class="btn btn-default btn-xs">立即上課</button></td>
+                                    <td align='right'>
+                                        <h4 style="color: red;">NT1,000</h4>
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <img src="C:/Users/sasac/Downloads/match/教育/code/img/活動BN2024-06.jpg">
+                            <h3 style="color: black;">室內裝潢自己的家，零經驗也能上手</h3>
+                            <br>
+                            <table style="width:210px;">
+                                <tr>
+                                    <td>by<span>名字</span></td>
+                                    <td align='right'><i class="fa-solid fa-film"></i><span>90</span>天</td>
+                                </tr>
+                                <tr>
+                                    <td> <button class="btn btn-default btn-xs">立即上課</button></td>
+                                    <td align='right'>
+                                        <h4 style="color: red;">NT1,000</h4>
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--嚴選影音-->
+            <div class="new_class_font">
+                <h3>嚴選影音</h3></br>
+                <div class="owl-carousel-three owl-carousel owl-theme">
+                    <div class="item-video">
+                        <a class="owl-video" href="https://www.youtube.com/live/MgxXJ3mKpVA?si=QZgp1sOZsfLuHLI8"></a>
+                    </div>
+                    <div class="item-video">
+                        <a class="owl-video" href="https://www.youtube.com/live/MgxXJ3mKpVA?si=QZgp1sOZsfLuHLI8"></a>
+                    </div>
+                    <div class="item-video">
+                        <a class="owl-video" href="https://www.youtube.com/live/MgxXJ3mKpVA?si=QZgp1sOZsfLuHLI8"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--理周推薦-->
+        <div class="new_class" style="width: max-content;">
+
+        </div>
+        <script>
+            //活動維護輪播
+            $('.owl-carousel-one').owlCarousel({
+                loop: true, //循環
+                margin: 10, //與右邊圖片的距離
+                nav: true, //導航
+                dots: true,
+                mouseDrag: false, // 滑鼠拖曳
+                touchDrag: false, // 觸控拖曳
+                navText: ['<', '>'],
+                autoplay: false,//自動
+                startPosition: 'URLHash',
+                //rwd
+                responsive: {
+                    0: {
+                        items: 1 //出現幾個
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+
+            //最新課程輪播
+            $('.owl-carousel-best').owlCarousel({
+                items: 2,
+                loop: true, //循環
+                margin: 10, //與右邊圖片的距離
+                nav: true, //導航文字
+                dots: true,
+                autoplay: true,//自動
+                //rwd
+                responsive: {
+                    0: {
+                        items: 1 //出現幾個
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+
+            //影音
+            $('.owl-carousel-three').owlCarousel({
+                items: 2,
+                loop: true, //循環
+                margin: 10, //與右邊圖片的距離
+                nav: true, //導航文字
+                dots: true,
+                autoplay: true,//自動
+                video: true,// 影片
+                //rwd
+                responsive: {
+                    0: {
+                        items: 1 //出現幾個
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        </script>
+    </div>
+    </div>
+
+</body>
+
+</html>
