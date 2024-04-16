@@ -1,93 +1,65 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理周教育學苑</title>
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--fontawesome-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <!--OwlCarousel2-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- owl carousel cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <title>理周教育學苑</title>
-    <style>
-        .nav-tabs {
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .nav>li {
-            float: none;
-            display: inline-block;
-        }
-
-        .nav>li>a {
-            margin-right: 5px;
-        }
-
-        .new_class {
-            position: absolute;
-            background-color: white;
-
-        }
-
-        .new_class_font {
-            color: #ec5355;
-            text-align: center;
-        }
-    </style>
+    <!-- selfmade css -->
+    <link rel="stylesheet" type="text/css" href="css/broccoli-style.css">
 </head>
 
 <body>
-    <!--標題列-->
-    <div class="wrapper" style="width: 100%;">
-        <div class="row">
-            <div class="col-lg-4">
-                <div>
-                    <a href="C:/Users/sasac/Downloads/match/教育/code/index.html">
-                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/logo.png">
+    <header class="header">
+        <!--標題列-->
+        <div class="wrapper">
+            <div class="row">
+                <!-- logo -->
+                <div class="col-md-3">
+                    <a href="index.html">
+                        <img src="img/lz-college-logo.png" alt="logo">
                     </a>
                 </div>
-
-            </div>
-            <div class="col-lg-3">
-                <div class="input-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        理財課程 <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">成人理財</a></li>
-                        <li><a href="#" class="dropdown-item">線上影音</a></li>
-                        <li><a href="#" class="dropdown-item">兒童材商</a></li>
-                    </ul>
+                <!-- search bar -->
+                <div class="col-md-4 searchSection">
+                    <div class="input-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">理財課程<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">成人理財</a></li>
+                            <li><a href="#" class="dropdown-item">線上影音</a></li>
+                            <li><a href="#" class="dropdown-item">兒童材商</a></li>
+                        </ul>
+                    </div>
                     <input type="text" class="form-control" placeholder="Search for...">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button">確認</button>
                     </span>
                 </div>
-            </div>
-            <!--  -->
-            <div class="col-lg-3">
-                <div class="input-group">
-                    <div class="icon-bar">
-                        <a href="#"><i class="fa-solid fa-film"></i>我的課程</a>
-                        <a href="#"><i class="fa-solid fa-user"></i>會員中心</a>
-                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></i>購物車</a>
-                        <a href="#"><i class="fa-solid fa-cart-shopping"></i>定期定額</a>
-                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i>登出會員</a>
+                <!-- member options -->
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <div class="icon-bar">
+                            <a href="#"><i class="fa fa-film"></i> 我的課程</a>
+                            <a href="#"><i class="fa fa-solid fa-user"></i> 會員中心</a>
+                            <a href="#"><i class="fa fa-shopping-cart"></i> 購物車</a>
+                            <a href="#"><i class="fa fa-cart-arrow-down"></i> 定期定額</a>
+                            <a href="#"><i class="fa fa-sign-out-alt"></i> 登出會員</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--選單 -->
-        <div>
+        <!-- member bar-->
+        <nav>
             <ul class="nav nav-tabs">
                 <li><a href="#">關於我們</a></li>
                 <li><a href="#">理周講師</a></li>
@@ -102,74 +74,115 @@
                 <li><a href="#">數位訂閱</a></li>
                 <li><a href="#">理周嚴選</a></li>
             </ul>
-        </div>
-        <div style="width: 99%;background-color:#ec5355;">
-            <!--輪播-->
-            <div style="width: 100%;">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#myCarousel" data-slide-to="1"></li>
-                      <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-                
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                
-                      <div class="item active">
-                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/banner_1.jpg"  style="width:100%;">
-                      </div>
-                
-                      <div class="item">
-                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/banner_1.jpg"  style="width:100%;">
-                      </div>
-                    
-                      <div class="item">
-                        <img src="C:/Users/sasac/Downloads/match/教育/code/img/banner_1.jpg"  style="width:100%;">
-                      </div>
-                  
-                    </div>
-                
-                    <!-- 按鈕 -->
-                    <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                      <span class="sr-only">Next</span>
-                    </a> -->
-
-                  </div>
+        </nav>
+    </header>
+    <main class="main container-fluid">
+        <!--幻燈片-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- silder indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- indicators content -->
+            <p class="carousel-indicator-content">I guess you want to type something here?</p>
+            <!-- slider images -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/banners/lz-banner-1.jpg" alt="banner">
                 </div>
 
-            </div> 
+                <div class="item">
+                    <img src="img/banners/lz-banner-2.jpg" alt="banner">
+                </div>
 
+                <div class="item">
+                    <img src="img/banners/lz-banner-3.jpg" alt="banner">
+                </div>
+
+            </div>
         </div>
         <!--最新消息輪播-->
-        <div class="new_class" style="width: 100%;">
+        <!-- new classes and hot programs -->
+        <div class="news_class">
             <!--最新課程-->
-            <div class="new_class_font">
-                <h3>最新 課程</h3>
+            <div>
+                <h3 class="new_class_titfont">最新 課程</h3>
+                <div class="owl-carousel-new owl-carousel owl-theme verticalSlide">
+                    <div class="item">
+                        <a href="">
+                            <section>
+                                <img src="img/banners/lz-banner-3.jpg" alt="news test">
+                                <h3>這堂課，跟大家分享我在短線、盤中當沖、隔日沖賺到千萬的做法。
+                                    有盤前、盤後功課，也有盤中技巧，還有面對狀況時的核心信仰，
+                                    很接近實戰的一堂課，我就靠這個在股市、期貨打滾28年，越混越好。
+                                </h3>
+                            </section>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <section>
+                                <img src="img/banners/lz-banner-5.jpg" alt="news test">
+                                <h3>期指是高風險高報酬高槓桿的商品，想學又不知如何入手?
+                                    想透過期指獲利來賺零用金卻又怕血本無歸
+                                    期貨市場畢竟是個零合遊戲，只要有人賺錢，就會有人輸錢，想成為市場贏家，就必定要練就一身好功夫。
+                                    上過錢坤老師的學員心得~「期指操作原來並不難！」
+                                    想要更多實戰的經驗，不能錯過老師精選近期15天台期指和10支個股範例，結合操作策略實戰，
+                                    教你期指/個股獲利的模式~
+                                </h3>
+                            </section>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <section>
+                                <img src="img/banners/lz-banner-5.jpg" alt="news test">
+                                <h3>期指是高風險高報酬高槓桿的商品，想學又不知如何入手?
+                                    想透過期指獲利來賺零用金卻又怕血本無歸
+                                    期貨市場畢竟是個零合遊戲，只要有人賺錢，就會有人輸錢，想成為市場贏家，就必定要練就一身好功夫。
+                                    上過錢坤老師的學員心得~「期指操作原來並不難！」
+                                    想要更多實戰的經驗，不能錯過老師精選近期15天台期指和10支個股範例，結合操作策略實戰，
+                                    教你期指/個股獲利的模式~
+                                </h3>
+                            </section>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <section>
+                                <img src="img/banners/lz-banner-5.jpg" alt="news test">
+                                <h3>期指是高風險高報酬高槓桿的商品，想學又不知如何入手?
+                                    想透過期指獲利來賺零用金卻又怕血本無歸
+                                    期貨市場畢竟是個零合遊戲，只要有人賺錢，就會有人輸錢，想成為市場贏家，就必定要練就一身好功夫。
+                                    上過錢坤老師的學員心得~「期指操作原來並不難！」
+                                    想要更多實戰的經驗，不能錯過老師精選近期15天台期指和10支個股範例，結合操作策略實戰，
+                                    教你期指/個股獲利的模式~
+                                </h3>
+                            </section>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!--熱門課程-->
-            <div>
                 <div class="owl-carousel-best owl-carousel owl-theme">
                     <div class="item">
-                        <a href="">
-                            <img src="C:/Users/sasac/Downloads/match/教育/code/img/活動BN2024-36.jpg">
-                            <h3 style="color: black;">室內裝潢自己的家，零經驗也能上手</h3>
-                            <br>
-                            <table style="width:210px;">
+                        <a href="#">
+                            <img src="img/banners/lz-banner-5.jpg" alt="banner">
+                            <h3 style="color: black;">「費波納契數列」在股市之運用</h3>
+                            <table class="table_font">
                                 <tr>
                                     <td>by<span>名字</span></td>
-                                    <td align='right'><i class="fa-solid fa-film"></i><span>90</span>天</td>
+                                    <td class="right">
+                                        <i class="fa-solid fa-film"></i>90天
+                                        <i class="fa-solid fa-film"></i>6.2小時</td>
                                 </tr>
                                 <tr>
-                                    <td> <button class="btn btn-default btn-xs">立即上課</button></td>
-                                    <td align='right'>
-                                        <h4 style="color: red;">NT1,000</h4>
+                                    <td> <button class="btn_class"><a href="#">立即上課</a></button></td>
+                                    <td>
+                                        <h4 style="color: #3c66ac;">NT$1,000</h4>
                                     </td>
                                 </tr>
                             </table>
@@ -177,18 +190,18 @@
                     </div>
                     <div class="item">
                         <a href="">
-                            <img src="C:/Users/sasac/Downloads/match/教育/code/img/活動BN2024-19.jpg">
-                            <h3 style="color: black;">室內裝潢自己的家，零經驗也能上手</h3>
-                            <br>
-                            <table style="width:210px;">
+                            <img src="img/banners/lz-banner-6.jpg" alt="banner">
+                            <h3 style="color: black;">李佛摩操盤術「關鍵點」</h3>
+                            <table class="table_font">
                                 <tr>
                                     <td>by<span>名字</span></td>
-                                    <td align='right'><i class="fa-solid fa-film"></i><span>90</span>天</td>
+                                    <td class="right"><i class="fa-solid fa-film"></i>90天<i
+                                            class="fa-solid fa-film"></i>2.2小時</td>
                                 </tr>
                                 <tr>
-                                    <td> <button class="btn btn-default btn-xs">立即上課</button></td>
-                                    <td align='right'>
-                                        <h4 style="color: red;">NT1,000</h4>
+                                    <td> <button class="btn_class"><a href="#">立即上課</a></button></td>
+                                    <td>
+                                        <h4 style="color: #3c66ac;">NT$2,280</h4>
                                     </td>
                                 </tr>
                             </table>
@@ -196,123 +209,139 @@
                     </div>
                     <div class="item">
                         <a href="">
-                            <img src="C:/Users/sasac/Downloads/match/教育/code/img/活動BN2024-06.jpg">
-                            <h3 style="color: black;">室內裝潢自己的家，零經驗也能上手</h3>
-                            <br>
-                            <table style="width:210px;">
+                            <img src="img/banners/lz-banner-7.jpg" alt="banner">
+                            <h3 style="color: black;">室內裝修自己來，零經驗也能上手</h3>
+                            <table class="table_font">
                                 <tr>
                                     <td>by<span>名字</span></td>
-                                    <td align='right'><i class="fa-solid fa-film"></i><span>90</span>天</td>
+                                    <td class="right"><i class="fa-solid fa-film"></i>90天<i
+                                            class="fa-solid fa-film"></i>6.3小時</td>
                                 </tr>
                                 <tr>
-                                    <td> <button class="btn btn-default btn-xs">立即上課</button></td>
-                                    <td align='right'>
-                                        <h4 style="color: red;">NT1,000</h4>
+                                    <td> <button class="btn_class"><a href="#">立即上課</a></button></td>
+                                    <td>
+                                        <h4 style="color: #3c66ac;">NT$5,200</h4>
                                     </td>
                                 </tr>
                             </table>
                         </a>
                     </div>
                 </div>
+        </div>
 
-            </div>
-
-            <!--嚴選影音-->
-            <div class="new_class_font">
-                <h3>嚴選影音</h3></br>
-                <div class="owl-carousel-three owl-carousel owl-theme">
-                    <div class="item-video">
-                        <a class="owl-video" href="https://www.youtube.com/live/MgxXJ3mKpVA?si=QZgp1sOZsfLuHLI8"></a>
+        <!-- video section -->
+        <div class="news_class videoSection">
+            <h3 class="new_class_titfont">嚴選影音</h3>
+            <!-- background figure -->
+            <span class="bgFigure">&nbsp;</span>
+            <!-- playable video -->
+            <iframe src="https://www.youtube.com/embed/YfGcmknl4sU?si=mce57bfYObgF1P_K" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- other videos -->
+            <div class="verticalSlideRight">
+                <div class="cards">
+                    <div class="item">
+                        <a href="">
+                            <img src="img/banners/lz-banner-1.jpg" alt="news test">
+                        </a>
                     </div>
-                    <div class="item-video">
-                        <a class="owl-video" href="https://www.youtube.com/live/MgxXJ3mKpVA?si=QZgp1sOZsfLuHLI8"></a>
+                    <div class="item">
+                        <a href="">
+                            <img src="img/banners/lz-banner-2.jpg" alt="news test">
+                        </a>
                     </div>
-                    <div class="item-video">
-                        <a class="owl-video" href="https://www.youtube.com/live/MgxXJ3mKpVA?si=QZgp1sOZsfLuHLI8"></a>
+                    <div class="item">
+                        <a href="">
+                            <img src="img/banners/lz-banner-3.jpg" alt="news test">
+                        </a>
                     </div>
+                    <div class="item">
+                        <a href="">
+                            <img src="img/banners/lz-banner-5.jpg" alt="news test">
+                        </a>
+                    </div>
+                </div>
+                <div class="bro-dots">
+                    <button role="button" class="bro-dot active"><span>&nbsp;</span></button>
+                    <button role="button" class="bro-dot"><span>&nbsp;</span></button>
+                    <button role="button" class="bro-dot"><span>&nbsp;</span></button>
+                    <button role="button" class="bro-dot"><span>&nbsp;</span></button>
                 </div>
             </div>
 
         </div>
 
-        <!--理周推薦-->
-        <div class="new_class" style="width: max-content;">
 
+
+        <div class="news_class">
+            <!--理周推薦-->
+            <h3 class="new_class_titfont">理周推薦</h3>
+            <div class="owl-carousel-recommend owl-carousel owl-theme">
+                <div class="item">
+                    <a href="">
+                        <img src="img/classes/lz-class-8.jpg" alt="class">
+                        <h3 style="color: black;">「費波納契數列」在股市之運用</h3>
+                        <h4 style="color: #3c66ac;">NT$1,000</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="img/classes/lz-class-7.jpg" alt="class">
+                        <h3 style="color: black;">70%的人會遇到財富損失◆直播</h3>
+                        <h4 style="color: #3c66ac;">NT$3,200</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="img/classes/lz-class-6.jpg" alt="class">
+                        <h3 style="color: black;">外匯獲利攻略初階◆現場</h3>
+                        <h4 style="color: #3c66ac;">NT$3,888</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="img/classes/lz-class-5.jpg" alt="class">
+                        <h3 style="color: black;">好命退休計算機◆現場</h3>
+                        <h4 style="color: #3c66ac;">NT$3,588</h4>
+                    </a>
+                </div>
+
+            </div>
         </div>
-        <script>
-            //活動維護輪播
-            $('.owl-carousel-one').owlCarousel({
-                loop: true, //循環
-                margin: 10, //與右邊圖片的距離
-                nav: true, //導航
-                dots: true,
-                mouseDrag: false, // 滑鼠拖曳
-                touchDrag: false, // 觸控拖曳
-                navText: ['<', '>'],
-                autoplay: false,//自動
-                startPosition: 'URLHash',
-                //rwd
-                responsive: {
-                    0: {
-                        items: 1 //出現幾個
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            });
 
-            //最新課程輪播
-            $('.owl-carousel-best').owlCarousel({
-                items: 2,
-                loop: true, //循環
-                margin: 10, //與右邊圖片的距離
-                nav: true, //導航文字
-                dots: true,
-                autoplay: true,//自動
-                //rwd
-                responsive: {
-                    0: {
-                        items: 1 //出現幾個
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            });
-
-            //影音
-            $('.owl-carousel-three').owlCarousel({
-                items: 2,
-                loop: true, //循環
-                margin: 10, //與右邊圖片的距離
-                nav: true, //導航文字
-                dots: true,
-                autoplay: true,//自動
-                video: true,// 影片
-                //rwd
-                responsive: {
-                    0: {
-                        items: 1 //出現幾個
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            });
-        </script>
-    </div>
-    </div>
-
+    </main>
+    <footer class="footer">
+        <!-- call action -->
+        <div class="callAction container-fluid">
+            <h3 class="col-md-4"><i class="fa fa-envelope"></i>加入我們可獲得最新課程資訊與優惠活動！</h3>
+            <input class="input-group-field col-md-4" name="ctl00$Web_Footer$txb_AddEDM" type="email" id="Web_Footer_txb_AddEDM"  placeholder="請填寫電子信箱 ...">
+            <span class="input-group-btn col-md-4">
+                <input type="submit" name="ctl00$Web_Footer$but_AddEDM" value="確認訂閱" id="Web_Footer_but_AddEDM" class="btn">
+                <a class="btn" target="_blank" href="../Web/Privacy.aspx">隱私權政策</a>
+            </span>
+        </div>
+        <!-- contact info -->
+        <div class="contact container-fluid">
+            <p class="col-md-9">
+                電話：(02)7725-8588 服務時間：週一~週五09:00~18:30(12:00~13:30及例假日休息)<br>
+                E-mail：service@moneyedu.org.tw 通訊地址：<a href="https://www.google.com.tw/maps/place/%E7%90%86%E5%91%A8%E6%95%99%E8%82%B2%E5%AD%B8%E8%8B%91/@25.0439102,121.5201314,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a9710228f50d:0x990339d5e73a8319!8m2!3d25.0439054!4d121.5223201?hl=zh-TW" target="_blank">100台北市青島東路7號4樓之3(R.O.C)</a><br>
+                統編：28214123 Copyright ©2008 理周教育學苑/華信整合公關(股)公司 版權所有
+            </p>
+            <div class="col-md-3">
+                <a href="index.html">
+                    <img src="img/lz-college-logo.png" alt="logo">
+                </a>
+            </div>
+        </div>
+        <!-- javascripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--OwlCarousel2-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="js/broccoli-function.js"></script>
+    </footer>
 </body>
 
 </html>
