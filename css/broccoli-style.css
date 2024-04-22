@@ -140,49 +140,46 @@ nav ul li a:hover {
   padding: 0 6rem 0 6rem;
   display: grid;
   grid-template-columns: auto auto;
-  margin-bottom: 1rem;
 }
-.news_class .verticalSlide .owl-stage-outer {
-  grid-column: 2/3;
+.news_class .verticalSlide .slick-list {
   grid-row: 1/2;
+  grid-column: 2/3;
 }
-.news_class .verticalSlide .owl-stage-outer .item {
-  width: 85vw;
-}
-.news_class .verticalSlide .owl-stage-outer .item section {
+.news_class .verticalSlide .slick-list .item.slick-slide a section {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 40% 60%;
   gap: 1rem;
 }
-.news_class .verticalSlide .owl-stage-outer .item section img {
-  grid-column: 1/2;
+.news_class .verticalSlide .slick-list .item.slick-slide a section img {
   grid-row: 1/2;
+  grid-column: 1/2;
+  width: 100%;
+  align-content: center;
 }
-.news_class .verticalSlide .owl-stage-outer .item section h3 {
-  align-self: center;
-  width: 95%;
-  font-size: 2rem;
+.news_class .verticalSlide .slick-list .item.slick-slide a section h3 {
+  grid-row: 1/2;
   grid-column: 2/3;
-  grid-row: 1/2;
+  font-size: 1.5rem;
+  align-content: center;
+  margin: 0;
 }
-.news_class .verticalSlide .owl-dots {
-  grid-column: 1/2;
+.news_class .verticalSlide .slick-dots {
   grid-row: 1/2;
+  grid-column: 1/2;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 1rem;
+  justify-content: space-evenly;
+  list-style-type: none;
 }
-.news_class .verticalSlide .owl-dots span {
-  width: 20px;
-  height: 20px;
-  margin: 1rem 0 1rem 0;
+.news_class .verticalSlide .slick-dots li button {
+  border: none;
+  background-color: #ffaaac;
+  border-radius: 20rem;
+  color: transparent;
 }
-.news_class .verticalSlide .owl-dots button > span {
-  background: #ffaaac;
-}
-.news_class .verticalSlide .owl-dots .active > span {
-  background: #ec5355;
+.news_class .verticalSlide .slick-dots li.slick-active > button {
+  background-color: #ec5355;
 }
 .news_class .owl-carousel-best {
   padding: 6rem;
@@ -213,7 +210,7 @@ nav ul li a:hover {
 
 .videoSection {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 70% 30%;
   grid-template-rows: auto auto;
   padding: 0 5rem 5rem 5rem;
 }
@@ -226,27 +223,20 @@ nav ul li a:hover {
   grid-row: 2/3;
   background-color: #ec5355;
   border-radius: 50rem 0 0 0;
+  aspect-ratio: 16/9;
 }
 .videoSection iframe {
   grid-column: 1/2;
   grid-row: 2/3;
-  height: 60vh;
+  width: 100%;
   padding: 2rem;
   aspect-ratio: 16/9;
 }
-.videoSection .verticalSlideRight {
+.videoSection .verticalSlideRight .cards {
   grid-column: 2/3;
   grid-row: 2/3;
-  width: 100%;
   display: grid;
   grid-template-columns: auto auto;
-}
-.videoSection .verticalSlideRight .cards {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  display: flex;
-  flex-direction: column;
-  height: 60vh;
   overflow-y: scroll;
   margin-left: 1rem;
 }
@@ -256,33 +246,27 @@ nav ul li a:hover {
   -ms-overflow-style: none;
 }
 .videoSection .verticalSlideRight .cards a img {
-  width: 100%;
+  width: 80%;
   margin: 1rem 0 1rem 0;
   border-radius: 2rem;
 }
-.videoSection .verticalSlideRight .bro-dots {
+.videoSection .verticalSlideRight .cards .slick-dots {
   grid-column: 2/3;
   grid-row: 1/2;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  list-style-type: none;
 }
-.videoSection .verticalSlideRight .bro-dots button {
-  background-color: transparent;
+.videoSection .verticalSlideRight .cards .slick-dots li button {
   border: none;
+  background-color: #ffaaac;
+  border-radius: 20rem;
+  color: transparent;
 }
-.videoSection .verticalSlideRight .bro-dots span {
-  margin: 1rem 0 1rem 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 30px;
-}
-.videoSection .verticalSlideRight .bro-dots button span {
-  background: #ffaaac;
-}
-.videoSection .verticalSlideRight .bro-dots .active span {
-  background: #ec5355;
+.videoSection .verticalSlideRight .cards .slick-dots li.slick-active > button {
+  background-color: #ec5355;
 }
 
 .new_class_titfont {
@@ -364,10 +348,18 @@ footer .contact p {
   .wrapper > .row {
     flex-direction: column !important;
   }
+  .verticalSlide .slick-list.draggable {
+    transform: scale(1.4);
+    margin: 2rem 0 2rem 0;
+  }
   .verticalSlide section {
-    display: flex !important;
-    flex-direction: column;
-    transform: scale(0.95);
+    grid-template-columns: 60% 40%;
+  }
+  .verticalSlide section img {
+    width: 100%;
+  }
+  .verticalSlide section h3 {
+    font-size: 0.5rem !important;
   }
   .bgFigure {
     display: none;

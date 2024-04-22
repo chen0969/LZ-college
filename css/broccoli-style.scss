@@ -134,49 +134,6 @@ nav ul li a{
     }
 }
 
-// mixin for vartical slide
-@mixin verticalSlide($stage, $dot){
-        display: grid;
-        grid-template-columns: auto auto;
-        margin-bottom: 1rem;
-        .owl-stage-outer{
-            grid-column: #{$stage};
-            grid-row: 1/2;
-            .item{
-                width: 85vw;
-                section{
-                    display: grid;
-                    grid-template-columns: 45% 55%;
-                    gap: 1rem;
-                    img{
-                        grid-column: 1/2;
-                        grid-row: 1/2;
-                    }
-                    h3{
-                        align-self: center;
-                        width: 95%;
-                        font-size: 2rem;
-                        grid-column: 2/3;
-                        grid-row: 1/2;
-                    }
-                }
-            }
-        }
-        .owl-dots{
-            grid-column: #{$dot};
-            grid-row: 1/2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 1rem;
-            span{
-                width: 20px;
-                height: 20px;
-                margin: 1rem 0 1rem 0;}
-            button>span{background: $lightcolor;}
-            .active>span{background: $maincolor;}
-        }
-}
 
 
 .news_class {
@@ -184,8 +141,50 @@ nav ul li a{
     margin: 2rem 0 2rem 0;
     .verticalSlide{
         padding: 0 6rem 0 6rem;
-        @include verticalSlide(#{2/3}, #{1/2});
+        display: grid;
+        grid-template-columns: auto auto;
+        .slick-list{
+            grid-row: 1/2;
+            grid-column: 2/3;
+            .item.slick-slide a section{
+                display: grid;
+                grid-template-columns: 40% 60%;
+                gap: 1rem;
+                img{
+                    grid-row: 1/2;
+                    grid-column: 1/2;
+                    width: 100%;
+                    align-content: center;
+                }
+                h3{
+                    grid-row: 1/2;
+                    grid-column: 2/3;
+                    font-size: 1.5rem;
+                    align-content: center;
+                    margin: 0;
+                }
+            }
+        }
+        .slick-dots{
+            grid-row: 1/2;
+            grid-column: 1/2;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            list-style-type:none;
+            li button{
+                border: none;
+                background-color: $lightcolor;
+                border-radius: 20rem;
+                color: transparent;
+            }
+            li.slick-active>button{
+                background-color: $maincolor;
+            }
+        }
     }
+
     .owl-carousel-best{
         padding: 6rem;
         .item a{        
@@ -211,7 +210,7 @@ nav ul li a{
 
 .videoSection{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 70% 30%;
     grid-template-rows: auto auto;
     padding: 0 5rem 5rem 5rem;
     h3{
@@ -223,26 +222,21 @@ nav ul li a{
         grid-row: 2/3;
         background-color: $maincolor;
         border-radius: 50rem 0 0 0;
+        aspect-ratio: 16/9;
     }
     iframe{
         grid-column: 1/2;
         grid-row: 2/3;
-        height: 60vh;
+        width: 100%;
         padding: 2rem;
         aspect-ratio: 16/9;
     }
     .verticalSlideRight{
-        grid-column: 2/3;
-        grid-row: 2/3;
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto auto;
         .cards{
-            grid-column: 1/2;
-            grid-row: 1/2;
-            display: flex;
-            flex-direction: column;
-            height: 60vh;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: grid;
+            grid-template-columns: auto auto;
             overflow-y: scroll;
             margin-left: 1rem;
             &::-webkit-scrollbar{
@@ -251,32 +245,29 @@ nav ul li a{
                 -ms-overflow-style: none;
             }
             a img{
-                width: 100%;
+                width: 80%;
                 margin: 1rem 0 1rem 0;
                 border-radius: 2rem;
             }
-        }
-        .bro-dots{
-            grid-column: 2/3;
-            grid-row: 1/2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            button{
-                background-color: transparent;
-                border: none;
+            .slick-dots{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                list-style-type:none;
+                li button{
+                    border: none;
+                    background-color: $lightcolor;
+                    border-radius: 20rem;
+                    color: transparent;
+                }
+                li.slick-active>button{
+                    background-color: $maincolor;
+                }
             }
-            span{
-                margin: 1rem 0 1rem 0;
-                display: block;
-                width: 20px;
-                height: 20px;
-                border-radius: 30px;
-            }
-            button span{background: $lightcolor;}
-            .active span{background: $maincolor;}
         }
-
     }
 }
 
@@ -358,10 +349,18 @@ footer{
         flex-direction: column !important;
     }
     .verticalSlide{
+        .slick-list.draggable{
+            transform: scale(1.4);
+            margin: 2rem 0 2rem 0;
+        }
         section{
-            display: flex !important;
-            flex-direction: column;
-            transform: scale(0.95);
+            grid-template-columns: 60% 40%;
+            img{
+                width: 100%;
+            }
+            h3{
+                font-size: 0.5rem !important;
+            }
         }
     }
 

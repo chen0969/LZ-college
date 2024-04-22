@@ -111,3 +111,41 @@ $('.owl-carousel-video').owlCarousel({
         }
     }
 });
+
+$(document).ready(function(){
+    $(".broccoliSlider .cards.slider").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      vertical: true,
+      draggable: true,
+      verticalSwiping: true,
+      pauseOnHover:false,
+      arrows: false
+    });
+
+    $(".verticalSlide.slider").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        vertical: true,
+        draggable: true,
+        verticalSwiping: true,
+        pauseOnHover: false,
+        arrows: false,
+// rwd
+        responsive: [
+            {
+              breakpoint: 750,
+              settings: {
+                dots: false
+              }
+            }]
+      },
+      
+    );
+  });

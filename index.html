@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- slick cdn -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- selfmade css -->
     <link rel="stylesheet" type="text/css" href="css/broccoli-style.css">
 </head>
@@ -109,7 +111,7 @@
             <!--最新課程-->
             <div>
                 <h3 class="new_class_titfont">最新 課程</h3>
-                <div class="owl-carousel-new owl-carousel owl-theme verticalSlide">
+                <div class="verticalSlide slider">
                     <div class="item">
                         <a href="">
                             <section>
@@ -117,20 +119,6 @@
                                 <h3>這堂課，跟大家分享我在短線、盤中當沖、隔日沖賺到千萬的做法。
                                     有盤前、盤後功課，也有盤中技巧，還有面對狀況時的核心信仰，
                                     很接近實戰的一堂課，我就靠這個在股市、期貨打滾28年，越混越好。
-                                </h3>
-                            </section>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="">
-                            <section>
-                                <img src="img/banners/lz-banner-5.jpg" alt="news test">
-                                <h3>期指是高風險高報酬高槓桿的商品，想學又不知如何入手?
-                                    想透過期指獲利來賺零用金卻又怕血本無歸
-                                    期貨市場畢竟是個零合遊戲，只要有人賺錢，就會有人輸錢，想成為市場贏家，就必定要練就一身好功夫。
-                                    上過錢坤老師的學員心得~「期指操作原來並不難！」
-                                    想要更多實戰的經驗，不能錯過老師精選近期15天台期指和10支個股範例，結合操作策略實戰，
-                                    教你期指/個股獲利的模式~
                                 </h3>
                             </section>
                         </a>
@@ -240,8 +228,8 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <!-- other videos -->
-            <div class="verticalSlideRight">
-                <div class="cards">
+            <div class="verticalSlideRight broccoliSlider" >
+                <div class="cards slider">
                     <div class="item">
                         <a href="">
                             <img src="img/banners/lz-banner-1.jpg" alt="news test">
@@ -262,12 +250,16 @@
                             <img src="img/banners/lz-banner-5.jpg" alt="news test">
                         </a>
                     </div>
-                </div>
-                <div class="bro-dots">
-                    <button role="button" class="bro-dot active"><span>&nbsp;</span></button>
-                    <button role="button" class="bro-dot"><span>&nbsp;</span></button>
-                    <button role="button" class="bro-dot"><span>&nbsp;</span></button>
-                    <button role="button" class="bro-dot"><span>&nbsp;</span></button>
+                    <div class="item">
+                        <a href="">
+                            <img src="img/banners/lz-banner-1.jpg" alt="news test">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <img src="img/banners/lz-banner-2.jpg" alt="news test">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -340,6 +332,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <!--OwlCarousel2-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <!-- slick cdn -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="js/broccoli-function.js"></script>
     </footer>
 </body>
