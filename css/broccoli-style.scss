@@ -147,21 +147,20 @@ nav ul li a{
             grid-row: 1/2;
             grid-column: 2/3;
             .item.slick-slide a section{
-                display: grid;
-                grid-template-columns: 40% 60%;
-                gap: 1rem;
+                display: flex;
+                justify-content: center;
+                height: 40rem;
+                padding: 5rem;
                 img{
-                    grid-row: 1/2;
-                    grid-column: 1/2;
-                    width: 100%;
+                    width: 60rem;
+                    aspect-ratio: 16/9;
                     align-content: center;
                 }
                 h3{
-                    grid-row: 1/2;
-                    grid-column: 2/3;
-                    font-size: 1.5rem;
+                    padding: 2rem;
+                    width: 40%;
+                    font-size: 2rem;
                     align-content: center;
-                    margin: 0;
                 }
             }
         }
@@ -237,17 +236,15 @@ nav ul li a{
             grid-row: 2/3;
             display: grid;
             grid-template-columns: auto auto;
-            overflow-y: scroll;
-            margin-left: 1rem;
-            &::-webkit-scrollbar{
-                display: none;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-            }
-            a img{
-                width: 80%;
-                margin: 1rem 0 1rem 0;
-                border-radius: 2rem;
+            height: 35rem;
+            padding: 1rem;
+            a{
+                display: block;
+                padding: 2rem;
+                img{
+                    width: 100%;
+                    border-radius: 1rem;
+                }
             }
             .slick-dots{
                 grid-column: 2/3;
@@ -349,17 +346,16 @@ footer{
         flex-direction: column !important;
     }
     .verticalSlide{
-        .slick-list.draggable{
-            transform: scale(1.4);
-            margin: 2rem 0 2rem 0;
-        }
-        section{
-            grid-template-columns: 60% 40%;
+        padding: 1rem !important;
+        .item.slick-slide a section{
+            flex-direction: column;
+            padding: 1rem !important;
             img{
-                width: 100%;
+                width:100% !important;
             }
             h3{
-                font-size: 0.5rem !important;
+                width: 100% !important;
+                font-size: 1rem !important;
             }
         }
     }

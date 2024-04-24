@@ -146,22 +146,21 @@ nav ul li a:hover {
   grid-column: 2/3;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  height: 40rem;
+  padding: 5rem;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section img {
-  grid-row: 1/2;
-  grid-column: 1/2;
-  width: 100%;
+  width: 60rem;
+  aspect-ratio: 16/9;
   align-content: center;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section h3 {
-  grid-row: 1/2;
-  grid-column: 2/3;
-  font-size: 1.5rem;
+  padding: 2rem;
+  width: 40%;
+  font-size: 2rem;
   align-content: center;
-  margin: 0;
 }
 .news_class .verticalSlide .slick-dots {
   grid-row: 1/2;
@@ -237,18 +236,16 @@ nav ul li a:hover {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: auto auto;
-  overflow-y: scroll;
-  margin-left: 1rem;
+  height: 35rem;
+  padding: 1rem;
 }
-.videoSection .verticalSlideRight .cards::-webkit-scrollbar {
-  display: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.videoSection .verticalSlideRight .cards a {
+  display: block;
+  padding: 2rem;
 }
 .videoSection .verticalSlideRight .cards a img {
-  width: 80%;
-  margin: 1rem 0 1rem 0;
-  border-radius: 2rem;
+  width: 100%;
+  border-radius: 1rem;
 }
 .videoSection .verticalSlideRight .cards .slick-dots {
   grid-column: 2/3;
@@ -348,18 +345,19 @@ footer .contact p {
   .wrapper > .row {
     flex-direction: column !important;
   }
-  .verticalSlide .slick-list.draggable {
-    transform: scale(1.4);
-    margin: 2rem 0 2rem 0;
+  .verticalSlide {
+    padding: 1rem !important;
   }
-  .verticalSlide section {
-    grid-template-columns: 60% 40%;
+  .verticalSlide .item.slick-slide a section {
+    flex-direction: column;
+    padding: 1rem !important;
   }
-  .verticalSlide section img {
-    width: 100%;
+  .verticalSlide .item.slick-slide a section img {
+    width: 100% !important;
   }
-  .verticalSlide section h3 {
-    font-size: 0.5rem !important;
+  .verticalSlide .item.slick-slide a section h3 {
+    width: 100% !important;
+    font-size: 1rem !important;
   }
   .bgFigure {
     display: none;

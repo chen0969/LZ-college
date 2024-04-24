@@ -112,24 +112,35 @@ $('.owl-carousel-video').owlCarousel({
     }
 });
 
+
+// slick slider
 $(document).ready(function(){
     $(".broccoliSlider .cards.slider").slick({
       dots: true,
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       autoplay: true,
       vertical: true,
       draggable: true,
       verticalSwiping: true,
       pauseOnHover:false,
-      arrows: false
+      arrows: false,
+      // rwd
+      responsive: [
+        {
+          breakpoint: 750,
+          settings: {
+            dots: false,
+            slidesToShow: 1
+          }
+        }]
     });
 
     $(".verticalSlide.slider").slick({
         dots: true,
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         vertical: true,
