@@ -13,6 +13,7 @@ body header {
 }
 body header .wrapper .row {
   width: 100%;
+  height: 12rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -56,6 +57,17 @@ body header .nav a, body header .nav-tabs a {
 }
 body .row {
   margin: 0;
+}
+body footer a.line {
+  display: block;
+  position: fixed;
+  bottom: 3rem;
+  right: 2.5rem;
+  width: 5%;
+  z-index: 2;
+}
+body footer a.line img {
+  width: 100%;
 }
 
 .searchSection {
@@ -105,6 +117,9 @@ nav ul li a:hover {
   color: white;
 }
 
+#myCarousel {
+  margin: 0 18% 0 18%;
+}
 #myCarousel .carousel-indicators {
   background-color: gray;
   width: 100%;
@@ -134,7 +149,7 @@ nav ul li a:hover {
 
 .news_class {
   background-color: white;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 18% 2rem 18%;
 }
 .news_class .verticalSlide {
   padding: 0 6rem 0 6rem;
@@ -148,18 +163,20 @@ nav ul li a:hover {
 .news_class .verticalSlide .slick-list .item.slick-slide a section {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 40rem;
   padding: 5rem;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section img {
-  width: 60rem;
+  width: 60%;
+  height: 70%;
   aspect-ratio: 16/9;
   align-content: center;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section h3 {
-  padding: 2rem;
+  padding: 1.5rem;
   width: 40%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   align-content: center;
 }
 .news_class .verticalSlide .slick-dots {
@@ -184,13 +201,12 @@ nav ul li a:hover {
   padding: 6rem;
 }
 .news_class .owl-carousel-best .item a {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .news_class .owl-carousel-best .item a h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 1rem 0 2rem 0;
 }
 .news_class .owl-carousel-best .item a table a {

@@ -49,7 +49,7 @@ $('.owl-carousel-best').owlCarousel({
     margin: 50, //與右邊圖片的距離
     nav: true, //導航文字
     dots: true,
-    autoplay: true, //自動
+    autoplay: false, //自動
 
     //rwd
     responsive: {
