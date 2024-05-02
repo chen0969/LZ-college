@@ -1,5 +1,6 @@
 h3 {
   color: #ec5355;
+  font-weight: 900;
 }
 
 body {
@@ -169,15 +170,17 @@ nav ul li a:hover {
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section img {
   width: 60%;
-  height: 70%;
+  height: 55%;
   aspect-ratio: 16/9;
   align-content: center;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section h3 {
   padding: 1.5rem;
-  width: 40%;
+  width: 50%;
   font-size: 1.4rem;
   align-content: center;
+  line-height: 1.6;
+  letter-spacing: 1px;
 }
 .news_class .verticalSlide .slick-dots {
   grid-row: 1/2;
@@ -286,7 +289,7 @@ nav ul li a:hover {
   color: #ec5355;
   text-align: center;
   font-size: 30px;
-  padding: 2rem 0 5rem 0;
+  padding: 8rem 0 8rem 0;
   margin: 0;
 }
 
