@@ -14,7 +14,7 @@ body header {
 }
 body header .wrapper .row {
   width: 100%;
-  height: 12rem;
+  height: 20vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -51,6 +51,7 @@ body header .nav, body header .nav-tabs {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  height: 10vh;
   border: 0;
 }
 body header .nav a, body header .nav-tabs a {
@@ -58,6 +59,14 @@ body header .nav a, body header .nav-tabs a {
 }
 body .row {
   margin: 0;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body footer .contact {
+  width: 100vw;
 }
 body footer a.line {
   display: block;
@@ -69,6 +78,13 @@ body footer a.line {
 }
 body footer a.line img {
   width: 100%;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .searchSection {
@@ -118,9 +134,6 @@ nav ul li a:hover {
   color: white;
 }
 
-#myCarousel {
-  margin: 0 18% 0 18%;
-}
 #myCarousel .carousel-indicators {
   background-color: gray;
   width: 100%;
@@ -145,12 +158,12 @@ nav ul li a:hover {
   margin: 0 0 0 1rem;
 }
 #myCarousel .carousel-inner div > img {
-  width: 100%;
+  height: 70vh;
 }
 
 .news_class {
+  width: 64%;
   background-color: white;
-  margin: 2rem 18% 2rem 18%;
 }
 .news_class .verticalSlide {
   padding: 0 6rem 0 6rem;
@@ -160,6 +173,9 @@ nav ul li a:hover {
 .news_class .verticalSlide .slick-list {
   grid-row: 1/2;
   grid-column: 2/3;
+}
+.news_class .verticalSlide .slick-list .item.slick-slide a:focus, .news_class .verticalSlide .slick-list .item.slick-slide a:active, .news_class .verticalSlide .slick-list .item.slick-slide a:hover, .news_class .verticalSlide .slick-list .item.slick-slide a:target {
+  border-color: white !important;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section {
   display: flex;
@@ -207,6 +223,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-color: white !important;
 }
 .news_class .owl-carousel-best .item a h3 {
   font-size: 1.5rem;
@@ -230,7 +247,6 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: auto auto;
-  padding: 0 5rem 5rem 5rem;
 }
 .videoSection h3 {
   grid-column: 1/3;
@@ -242,13 +258,14 @@ nav ul li a:hover {
   background-color: #ec5355;
   border-radius: 50rem 0 0 0;
   aspect-ratio: 16/9;
+  margin: 5%;
 }
 .videoSection iframe {
   grid-column: 1/2;
   grid-row: 2/3;
-  width: 100%;
   padding: 2rem;
   aspect-ratio: 16/9;
+  width: 95%;
 }
 .videoSection .verticalSlideRight .cards {
   grid-column: 2/3;
@@ -261,9 +278,10 @@ nav ul li a:hover {
 .videoSection .verticalSlideRight .cards a {
   display: block;
   padding: 2rem;
+  border-color: white;
 }
 .videoSection .verticalSlideRight .cards a img {
-  width: 100%;
+  width: 80%;
   border-radius: 1rem;
 }
 .videoSection .verticalSlideRight .cards .slick-dots {
@@ -316,18 +334,31 @@ footer {
 footer .callAction {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 footer .callAction h3 {
   font-size: 1.5rem;
   color: white;
   margin: 0;
+  padding: 0;
+  text-align: start;
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
 }
 footer .callAction .input-group-btn {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: -moz-fit-content;
   width: fit-content;
+}
+footer .callAction .input-group-btn span {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem 0 1rem;
 }
 footer .callAction .input-group-btn .btn {
   display: block;
@@ -339,15 +370,38 @@ footer .callAction .input-group-btn .btn {
   color: white;
   background-color: black;
   border-radius: 0;
-  margin-right: 1rem;
 }
 footer .contact {
   margin: 2rem;
-  padding-top: 2rem;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-footer .contact p {
+footer .contact div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0 2rem 0;
+}
+footer .contact div p {
+  width: 60%;
+  font-size: 1.1rem;
   color: black;
+  text-align: start;
+}
+footer .contact div p a {
+  width: -moz-max-content;
+  width: max-content;
+  color: black;
+}
+footer .contact div a {
+  display: flex;
+  width: 20%;
+  justify-content: end;
+}
+footer .contact div a img {
+  height: auto;
 }
 
 .btn_class {
@@ -358,11 +412,17 @@ footer .contact p {
 }
 
 @media only screen and (max-width: 750px) {
+  header .wrapper .row {
+    height: 30vh !important;
+  }
   header .col-md-5 {
     margin: 1rem;
   }
   .wrapper > .row {
     flex-direction: column !important;
+  }
+  #myCarousel .carousel-inner div > img {
+    height: auto;
   }
   .verticalSlide {
     padding: 1rem !important;
@@ -393,6 +453,9 @@ footer .contact p {
     border: solid #ec5355 1.5rem;
     border-radius: 2rem;
   }
+  .verticalSlideRight {
+    overflow-y: hidden;
+  }
   .owl-carousel-new {
     height: 70vh;
     padding: 1rem !important;
@@ -403,5 +466,17 @@ footer .contact p {
   .callAction {
     flex-direction: column;
     gap: 1rem;
+  }
+  footer .contact div {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .contact div p {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  footer .contact div a {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }/*# sourceMappingURL=broccoli-style.css.map */

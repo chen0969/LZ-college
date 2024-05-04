@@ -7,7 +7,7 @@
     mouseDrag: false, // 滑鼠拖曳
     touchDrag: false, // 觸控拖曳
     navText: ['<', '>'],
-    autoplay: false, //自動
+    autoplay: true, //自動
     startPosition: 'URLHash',
     //rwd
     responsive: {
@@ -49,7 +49,7 @@ $('.owl-carousel-best').owlCarousel({
     margin: 50, //與右邊圖片的距離
     nav: true, //導航文字
     dots: true,
-    autoplay: false, //自動
+    autoplay: true, //自動
 
     //rwd
     responsive: {
@@ -80,7 +80,7 @@ $('.owl-carousel-recommend').owlCarousel({
             items: 1 //出現幾個
         },
         400: {
-            items: 2
+            items: 1
         },
         1000: {
             items: 3
@@ -115,10 +115,11 @@ $('.owl-carousel-video').owlCarousel({
 
 // slick slider
 $(document).ready(function(){
+    initializeSectionWidth();
     $(".broccoliSlider .cards.slider").slick({
       dots: true,
       infinite: true,
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
       vertical: true,
@@ -160,3 +161,19 @@ $(document).ready(function(){
       
     );
   });
+
+
+  function initializeSectionWidth() {
+    // Check if the device is not a mobile device
+    if (window.innerWidth > 768) {
+        // section width
+        $(document).ready(function(){
+            let sectionW = $(".carousel-inner").width();
+            $(".news_class").each(function(){
+                $(this).width(sectionW);
+            });
+            $(".callAction").width(sectionW);
+            $(".contact > div").width(sectionW);
+        });
+    }
+}
