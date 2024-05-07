@@ -49,7 +49,7 @@ $('.owl-carousel-best').owlCarousel({
     margin: 50, //與右邊圖片的距離
     nav: true, //導航文字
     dots: true,
-    autoplay: true, //自動
+    autoplay: false, //自動
 
     //rwd
     responsive: {
@@ -83,7 +83,7 @@ $('.owl-carousel-recommend').owlCarousel({
             items: 1
         },
         1000: {
-            items: 3
+            items: 4
         }
     }
 });
@@ -174,6 +174,11 @@ $(document).ready(function(){
             });
             $(".callAction").width(sectionW);
             $(".contact > div").width(sectionW);
+            $(".butmBanner").width(sectionW);
         });
     }
+}
+
+function link(){
+    window.location.replace("#");
 }

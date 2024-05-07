@@ -14,48 +14,59 @@ body header {
 }
 body header .wrapper .row {
   width: 100%;
-  height: 20vh;
+  height: 12vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-body header .wrapper .row .col-md-3, body header .wrapper .row .col-md-4, body header .wrapper .row .col-md-5 {
+body header .wrapper .row .col-md-2, body header .wrapper .row .col-md-4 {
   padding: 0;
   display: flex;
   justify-content: center;
 }
-body header .wrapper .row .col-md-5 {
+body header .wrapper .row .col-md-2.social {
+  justify-content: space-evenly;
+}
+body header .wrapper .row .col-md-4.info {
   font-size: 1.2rem;
 }
-body header .wrapper .row .col-md-5 .icon-bar {
+body header .wrapper .row .col-md-4.info .icon-bar {
   display: flex;
   flex-direction: row;
 }
-body header .wrapper .row .col-md-5 .icon-bar a {
+body header .wrapper .row .col-md-4.info .icon-bar a {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-right: solid gray 1px;
   padding: 0 1rem 0 1rem;
 }
-body header .wrapper .row .col-md-5 .icon-bar a i {
+body header .wrapper .row .col-md-4.info .icon-bar a i {
   color: #ec5355;
 }
 body header a {
   color: gray;
 }
-body header .nav, body header .nav-tabs {
+body header nav {
   background-color: #ec5355;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  height: 10vh;
-  border: 0;
+  border-bottom: solid 1rem white;
 }
-body header .nav a, body header .nav-tabs a {
+body header nav ul {
+  all: unset;
+}
+body header nav a {
+  all: unset;
   color: white;
+  cursor: pointer;
+}
+body header nav a:hover, body header nav a:active, body header nav a:focus {
+  background-color: white !important;
+  border-radius: 0%;
 }
 body .row {
   margin: 0;
@@ -88,29 +99,49 @@ body main {
 }
 
 .searchSection {
+  all: unset;
   display: flex;
   flex-direction: row;
   background-color: #ec5355;
   gap: 0.3rem;
   border: #ec5355 solid 0.3rem;
   border-radius: 0.5rem;
-  width: -moz-min-content;
-  width: min-content;
+}
+.searchSection button.dropdown-toggle {
+  all: unset;
+  width: 8rem;
+  height: 3rem;
+  background-color: white;
+  text-align: center;
+  color: rgb(197, 197, 197);
+}
+.searchSection button.search {
+  all: unset;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(197, 197, 197);
+  color: gray;
+  font-size: 1rem;
 }
 .searchSection input {
-  background-color: #ec5355;
+  all: unset;
+  background-color: white;
   border: none;
   color: white;
+  width: -moz-max-content;
+  width: max-content;
 }
 .searchSection input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.467);
+  color: #ffaaac;
+  padding: 0 1rem 0 1rem;
 }
 .searchSection input::placeholder {
-  color: rgba(255, 255, 255, 0.467);
+  color: #ffaaac;
+  padding: 0 1rem 0 1rem;
 }
 .searchSection .form-control {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 20rem;
 }
 .searchSection > span {
   width: -moz-fit-content;
@@ -158,7 +189,7 @@ nav ul li a:hover {
   margin: 0 0 0 1rem;
 }
 #myCarousel .carousel-inner div > img {
-  height: 70vh;
+  height: 80vh;
 }
 
 .news_class {
@@ -174,10 +205,11 @@ nav ul li a:hover {
   grid-row: 1/2;
   grid-column: 2/3;
 }
-.news_class .verticalSlide .slick-list .item.slick-slide a:focus, .news_class .verticalSlide .slick-list .item.slick-slide a:active, .news_class .verticalSlide .slick-list .item.slick-slide a:hover, .news_class .verticalSlide .slick-list .item.slick-slide a:target {
-  border-color: white !important;
+.news_class .verticalSlide .slick-list .item.slick-slide a {
+  all: unset;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,14 +218,14 @@ nav ul li a:hover {
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section img {
   width: 60%;
-  height: 55%;
+  height: auto;
   aspect-ratio: 16/9;
   align-content: center;
 }
 .news_class .verticalSlide .slick-list .item.slick-slide a section h3 {
-  padding: 1.5rem;
-  width: 50%;
-  font-size: 1.4rem;
+  padding-left: 1rem;
+  width: 40%;
+  font-size: 1.2rem;
   align-content: center;
   line-height: 1.6;
   letter-spacing: 1px;
@@ -204,26 +236,28 @@ nav ul li a:hover {
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   list-style-type: none;
+  gap: 15px;
 }
 .news_class .verticalSlide .slick-dots li button {
+  font-size: 12px;
   border: none;
   background-color: #ffaaac;
-  border-radius: 20rem;
+  border-radius: 30rem;
   color: transparent;
 }
 .news_class .verticalSlide .slick-dots li.slick-active > button {
   background-color: #ec5355;
 }
 .news_class .owl-carousel-best {
-  padding: 6rem;
+  padding: 3rem 6rem 3rem 6rem;
 }
 .news_class .owl-carousel-best .item a {
+  all: unset;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-color: white !important;
 }
 .news_class .owl-carousel-best .item a h3 {
   font-size: 1.5rem;
@@ -243,48 +277,48 @@ nav ul li a:hover {
   margin: 0.5rem;
 }
 
-.videoSection {
+.videoSection > div {
   display: grid;
   grid-template-columns: 70% 30%;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
+  transform: scale(0.9);
 }
-.videoSection h3 {
-  grid-column: 1/3;
-  grid-row: 1/2;
-}
-.videoSection .bgFigure {
+.videoSection > div .bgFigure {
   grid-column: 1/2;
-  grid-row: 2/3;
+  grid-row: 1/2;
   background-color: #ec5355;
   border-radius: 50rem 0 0 0;
   aspect-ratio: 16/9;
-  margin: 5%;
+  margin: 1rem;
 }
-.videoSection iframe {
+.videoSection > div iframe {
   grid-column: 1/2;
-  grid-row: 2/3;
-  padding: 2rem;
+  grid-row: 1/2;
+  padding: 1rem;
   aspect-ratio: 16/9;
-  width: 95%;
+  width: 100%;
+  transform: scale(0.9);
 }
-.videoSection .verticalSlideRight .cards {
+.videoSection > div .verticalSlideRight .cards {
   grid-column: 2/3;
   grid-row: 2/3;
   display: grid;
   grid-template-columns: auto auto;
   height: 35rem;
   padding: 1rem;
+  transform: translateX(-30px) translateY(-20px) scale(0.9);
 }
-.videoSection .verticalSlideRight .cards a {
+.videoSection > div .verticalSlideRight .cards a {
+  all: unset;
+  cursor: pointer;
   display: block;
-  padding: 2rem;
-  border-color: white;
+  padding: 1.5rem;
 }
-.videoSection .verticalSlideRight .cards a img {
-  width: 80%;
+.videoSection > div .verticalSlideRight .cards a img {
+  width: 90%;
   border-radius: 1rem;
 }
-.videoSection .verticalSlideRight .cards .slick-dots {
+.videoSection > div .verticalSlideRight .cards .slick-dots {
   grid-column: 2/3;
   grid-row: 1/2;
   padding: 0;
@@ -293,26 +327,28 @@ nav ul li a:hover {
   justify-content: space-evenly;
   list-style-type: none;
 }
-.videoSection .verticalSlideRight .cards .slick-dots li button {
+.videoSection > div .verticalSlideRight .cards .slick-dots li button {
+  font-size: 12px;
   border: none;
   background-color: #ffaaac;
   border-radius: 20rem;
   color: transparent;
 }
-.videoSection .verticalSlideRight .cards .slick-dots li.slick-active > button {
+.videoSection > div .verticalSlideRight .cards .slick-dots li.slick-active > button {
   background-color: #ec5355;
 }
 
 .new_class_titfont {
   color: #ec5355;
   text-align: center;
-  font-size: 30px;
-  padding: 8rem 0 8rem 0;
+  font-size: 5rem;
+  padding: 5rem 0 3rem 0;
   margin: 0;
+  letter-spacing: 0.5rem;
 }
 
 .owl-carousel-recommend {
-  padding: 6rem;
+  padding: 3rem 6rem 3rem 6rem;
 }
 .owl-carousel-recommend .item a {
   display: flex;
@@ -320,11 +356,15 @@ nav ul li a:hover {
   justify-content: space-between;
 }
 .owl-carousel-recommend .item a h3 {
-  font-size: 1.8rem;
+  font-size: 1rem;
   margin: 1rem 0 2rem 0;
 }
 .owl-carousel-recommend .item a h4 {
   font-size: 1.5rem;
+}
+
+.butmBanner img {
+  width: 100%;
 }
 
 footer {
@@ -402,6 +442,9 @@ footer .contact div a {
 }
 footer .contact div a img {
   height: auto;
+}
+footer .contact div .blankSpace {
+  width: 10vw;
 }
 
 .btn_class {
