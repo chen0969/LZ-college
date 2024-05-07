@@ -273,7 +273,7 @@ nav ul li a{
             flex-direction: column;
             justify-content: space-between;
             h3{
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 margin: 1rem 0 2rem 0;
             }
             table{
@@ -370,7 +370,7 @@ nav ul li a{
         flex-direction: column;
         justify-content: space-between;
         h3{
-            font-size: 1rem;
+            font-size: 1.3rem;
             margin: 1rem 0 2rem 0;
         }
         h4{font-size: 1.5rem;}
@@ -515,13 +515,14 @@ footer{
     .videoSection > div{
         display: flex;
         flex-direction: column;
-        padding: 0 1rem 0 1rem;
+        padding: 0;
+        width: 100%;
         iframe{
             margin: 0;
-            padding: 1rem;
-            height: 30vh !important;
-            border: solid $maincolor 1.5rem;
+            width: 100% !important;
+            border: solid $maincolor 0.5rem;
             border-radius: 2rem;
+            transform: scale(1.05);
         }
         .verticalSlideRight .cards{
             display: flex;
