@@ -466,6 +466,11 @@ footer{
     font-size: 15px;
 }
 
+@media only screen and (min-width: 750px) and (max-width: 1000px){
+    #myCarousel .carousel-inner div > img {
+        height: auto;
+    }
+}
 
 @media only screen and (max-width: 750px) {
 
@@ -507,7 +512,7 @@ footer{
     .bgFigure{
         display: none;
     }
-    .videoSection{
+    .videoSection > div{
         display: flex;
         flex-direction: column;
         padding: 0 1rem 0 1rem;
@@ -517,6 +522,17 @@ footer{
             height: 30vh !important;
             border: solid $maincolor 1.5rem;
             border-radius: 2rem;
+        }
+        .verticalSlideRight .cards{
+            display: flex;
+            transform: none;
+            img{
+                width: 100% !important;
+                transform: scale(0.95);
+            }
+            .slick-dots{
+                display: none !important;
+            }
         }
     }
 
@@ -545,5 +561,8 @@ footer{
         a{
             width: fit-content;
         }
+    }
+    footer a.line{
+        width: 20% !important;
     }
   }
