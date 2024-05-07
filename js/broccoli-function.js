@@ -1,5 +1,77 @@
- //活動維護輪播
- $('.owl-carousel-one').owlCarousel({
+// slick slider
+$(document).ready(function(){
+    setWidth();
+    setTimeout(runOwl, 100);
+    setTimeout(runSlider, 110);
+  });
+
+
+function setWidth() {
+    // Check if the device is not a mobile device
+    if (window.innerWidth > 768) {
+        // section width
+        $(document).ready(function(){
+            let sectionW = $(".carousel-inner").width();
+            $(".news_class").each(function(){
+                $(this).width(sectionW);
+            });
+            $(".callAction").width(sectionW);
+            $(".contact > div").width(sectionW);
+            $(".butmBanner").width(sectionW);
+        });
+    }
+}
+
+function runSlider(){
+    $(".broccoliSlider .cards.slider").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        vertical: true,
+        draggable: true,
+        verticalSwiping: true,
+        pauseOnHover:false,
+        arrows: false,
+        // rwd
+        responsive: [
+          {
+            breakpoint: 750,
+            settings: {
+              dots: false,
+              slidesToShow: 1
+            }
+          }]
+      });
+  
+      $(".verticalSlide.slider").slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          vertical: true,
+          draggable: true,
+          verticalSwiping: true,
+          pauseOnHover: false,
+          arrows: false,
+  // rwd
+          responsive: [
+              {
+                breakpoint: 750,
+                settings: {
+                  dots: false
+                }
+              }]
+        },
+        
+      );
+}
+
+function runOwl(){
+//活動維護輪播
+$('.owl-carousel-one').owlCarousel({
     loop: true, //循環
     margin: 10, //與右邊圖片的距離
     nav: true, //導航
@@ -113,72 +185,5 @@ $('.owl-carousel-video').owlCarousel({
 });
 
 
-// slick slider
-$(document).ready(function(){
-    initializeSectionWidth();
-    $(".broccoliSlider .cards.slider").slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      vertical: true,
-      draggable: true,
-      verticalSwiping: true,
-      pauseOnHover:false,
-      arrows: false,
-      // rwd
-      responsive: [
-        {
-          breakpoint: 750,
-          settings: {
-            dots: false,
-            slidesToShow: 1
-          }
-        }]
-    });
-
-    $(".verticalSlide.slider").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        vertical: true,
-        draggable: true,
-        verticalSwiping: true,
-        pauseOnHover: false,
-        arrows: false,
-// rwd
-        responsive: [
-            {
-              breakpoint: 750,
-              settings: {
-                dots: false
-              }
-            }]
-      },
-      
-    );
-  });
-
-
-  function initializeSectionWidth() {
-    // Check if the device is not a mobile device
-    if (window.innerWidth > 768) {
-        // section width
-        $(document).ready(function(){
-            let sectionW = $(".carousel-inner").width();
-            $(".news_class").each(function(){
-                $(this).width(sectionW);
-            });
-            $(".callAction").width(sectionW);
-            $(".contact > div").width(sectionW);
-            $(".butmBanner").width(sectionW);
-        });
-    }
 }
 
-function link(){
-    window.location.replace("#");
-}
