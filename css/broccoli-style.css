@@ -526,6 +526,9 @@ footer .contact div .blankSpace {
   .videoSection > div .verticalSlideRight .cards .slick-dots {
     display: none !important;
   }
+  .verticalSlideRight {
+    overflow-y: hidden;
+  }
   .owl-carousel-new {
     height: 70vh;
     padding: 1rem !important;

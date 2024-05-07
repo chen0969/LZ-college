@@ -46,7 +46,7 @@ function runSlider() {
             breakpoint: 800,
             settings: {
                 dots: false,
-                slidesToShow: 1,
+                slidesToShow: 2,
 
             }
         }]
