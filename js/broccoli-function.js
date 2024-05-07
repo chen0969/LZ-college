@@ -18,6 +18,7 @@ function setWidth() {
             $(".callAction").width(sectionW);
             $(".contact > div").width(sectionW);
             $(".butmBanner").width(sectionW);
+            $("ul.nav.nav-tabs").width(sectionW);
         });
     }
 }

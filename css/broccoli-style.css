@@ -5,6 +5,7 @@ h3 {
 
 body {
   background-color: #ec5355;
+  overflow-x: hidden;
 }
 body a {
   color: white;
@@ -50,14 +51,23 @@ body header a {
 }
 body header nav {
   background-color: #ec5355;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   width: 100%;
   border-bottom: solid 1rem white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-body header nav ul {
+body header nav ul.nav.nav-tabs {
   all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body header nav ul.nav.nav-tabs::before, body header nav ul.nav.nav-tabs::after {
+  all: unset;
+}
+body header nav .nav-tabs {
+  border-bottom: none !important;
 }
 body header nav a {
   all: unset;

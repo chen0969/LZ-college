@@ -15,6 +15,7 @@ h3{
 
 body{
     background-color: $maincolor;
+    overflow-x: hidden;
     a{color: white;}
     header{
         background-color: white;
@@ -57,12 +58,21 @@ body{
         a{color: gray;}
         nav{
             background-color: $maincolor;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
             width: 100%;
             border-bottom: solid 1rem white;
-            ul{all: unset;}
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            ul.nav.nav-tabs{
+                all: unset;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                &::before, &::after{
+                    all: unset;
+                }
+            }
+            .nav-tabs{border-bottom: none !important;}
             a{
                 all: unset;
                 color: white;
