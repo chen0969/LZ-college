@@ -27,6 +27,7 @@ function setWidth() {
     $(".contact > div").width(sectionW);
     $(".butmBanner").width(sectionW);
     $("ul.nav.nav-tabs").width(sectionW);
+    $(".wrapper").width(sectionW);
 }
 
 function runSlider() {
@@ -75,6 +76,15 @@ function runSlider() {
         },
 
     );
+
+    $(".butmBanner").slick({
+        autoplay: true,
+        draggable: true,
+        infinite: true,
+        arrows: false,
+        dots: true,
+        autoplaySpeed: 1500,
+    });
 }
 
 function runOwl() {
