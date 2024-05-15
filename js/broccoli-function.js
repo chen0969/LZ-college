@@ -82,7 +82,7 @@ function runSlider() {
         draggable: true,
         infinite: true,
         arrows: false,
-        dots: true,
+        dots: false,
         autoplaySpeed: 1500,
     });
 }
