@@ -191,3 +191,17 @@ function mobileOwl() {
         center: true,
     });
 }
+
+function openNav() {
+    $("#theToggleHeader").css("width", "80vw");
+    $(".mobileHeader").css("filter", "brightness(50%) blur(5px) grayscale(80%)");
+    $("main").css("transform", "translateX(100px)");
+    $("main").css("filter", "brightness(50%) blur(5px) grayscale(80%)");
+  }
+  
+  function closeNav() {
+    $("#theToggleHeader").css("width", "0");
+    $("main").css("transform", "translateX(0)");
+    $(".mobileHeader").css("filter", "none");
+    $("main").css("filter", "none");
+  }

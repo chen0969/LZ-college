@@ -357,7 +357,7 @@ nav ul li a:hover {
 .new_class_titfont {
   color: #ec5355;
   text-align: center;
-  font-size: 5rem;
+  font-size: 7rem;
   padding: 5rem 0 3rem 0;
   margin: 0;
   letter-spacing: 0.5rem;
@@ -426,13 +426,13 @@ footer {
 footer .callAction {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 footer .callAction h3 {
   font-size: 1.5rem;
   color: white;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem 0 1rem;
   text-align: start;
   display: flex;
   justify-content: start;
@@ -446,6 +446,8 @@ footer .callAction .input-group-btn {
   justify-content: space-between;
   width: -moz-fit-content;
   width: fit-content;
+  gap: 1rem;
+  padding: 0 1rem 0 1rem;
 }
 footer .callAction .input-group-btn span {
   display: inline-block;
@@ -525,12 +527,139 @@ footer .mobileSocial a img {
   font-size: 15px;
 }
 
+.mobileHeader {
+  display: none;
+}
+
+.toggleHeader {
+  display: none;
+}
+
 @media only screen and (min-width: 750px) and (max-width: 1000px) {
   #myCarousel .carousel-inner div > img {
     height: auto;
   }
 }
 @media only screen and (max-width: 750px) {
+  main {
+    transition: 0.5s;
+  }
+  .header {
+    display: none;
+  }
+  .mobileHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.5s;
+  }
+  .mobileHeader span {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileHeader span p {
+    color: #ec5355;
+    font-size: 4rem;
+  }
+  .mobileHeader p, .mobileHeader i {
+    color: #ec5355;
+    font-size: 2rem;
+  }
+  .mobileHeader img {
+    width: 40%;
+  }
+  .toggleHeader {
+    display: block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    background-color: rgb(240, 240, 240);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .toggleHeader .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .toggleHeader h4 {
+    width: 100%;
+    padding: 8px;
+    align-content: center;
+    font-size: 2.5rem;
+    height: 60px;
+  }
+  .toggleHeader .userSection {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  .toggleHeader .userSection button {
+    all: unset;
+  }
+  .toggleHeader .userSection button:nth-child(1) {
+    background-color: #ec5355;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+  }
+  .toggleHeader .userSection button:nth-child(1) i {
+    color: white;
+    padding-right: 1rem;
+  }
+  .toggleHeader .userSection button:nth-child(2) {
+    background-color: white;
+    border: 2px solid #ec5355;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #ec5355;
+  }
+  .toggleHeader .userSection button:nth-child(2) i {
+    color: #ec5355;
+    padding-right: 1rem;
+  }
+  .toggleHeader a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .toggleHeader a:hover {
+    color: #f1f1f1;
+  }
+  .toggleHeader .selections {
+    border-bottom: solid rgb(204, 204, 204) 1px;
+    color: rgb(90, 90, 90);
+    width: 90%;
+    margin-left: 1.5rem;
+    padding: 1rem 0 1rem 0;
+    font-size: 1.7rem;
+    font-weight: 200;
+  }
+  .toggleHeader .selections i {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    color: #ec5355;
+  }
   header .wrapper .row {
     height: 30vh !important;
   }

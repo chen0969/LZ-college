@@ -87,6 +87,30 @@
             </ul>
         </nav>
     </header>
+    <header class="mobileHeader">
+        <span onclick="openNav()"><p>&#9776;</p></span>
+        <img src="img/lz-college-logo.png" alt="header logo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+    </header>
+    <div id="theToggleHeader" class="toggleHeader">
+        <a href="javascript:void(0)" class="closebtn col-4" onclick="closeNav()">&times;</a>
+        <h4>選單</h4>
+        <div class="userSection">
+            <button><i class="fa-solid fa-user"></i>會員登入</button>
+            <button><i class="fa-solid fa-user"></i>會員註冊</button>
+        </div>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>首頁</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>成人理財課程</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>線上影音課程</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>數位訂閱</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>書籍DVD</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>兒少財商營隊</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>理周嚴選</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>年度課表</a>
+        <a class="selections" href="#"><i class="fa-solid fa-house"></i>主打活動</a>
+    </div>
     <main class="main container-fluid">
         <!--幻燈片-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -414,13 +438,11 @@
         <a class="line" href="#"><img src="img/line.png" alt="line icon"></a>
         <!-- call action -->
         <div class="callAction">
-            <h3 class="col-md-5"><i class="fa fa-envelope"></i>加入我們可獲得最新課程資訊與優惠活動！</h3>
+            <h3><i class="fa fa-envelope"></i>加入我們可獲得最新課程資訊與優惠活動！</h3>
             <input class="input-group-field col-md-4" name="ctl00$Web_Footer$txb_AddEDM" type="email"
                 id="Web_Footer_txb_AddEDM" placeholder="請填寫電子信箱 ...">
-            <span class="input-group-btn col-md-3">
-                <input type="submit" name="ctl00$Web_Footer$but_AddEDM" value="確認訂閱" id="Web_Footer_but_AddEDM"
-                    class="btn">
-                <span>&nbsp;</span>
+            <span class="input-group-btn">
+                <input type="submit" name="ctl00$Web_Footer$but_AddEDM" value="確認訂閱" id="Web_Footer_but_AddEDM" class="btn">
                 <a class="btn" target="_blank" href="../Web/Privacy.aspx">隱私權政策</a>
             </span>
         </div>
