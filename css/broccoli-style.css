@@ -241,10 +241,11 @@ nav ul li a:hover {
 .news_class .verticalSlide .slick-list .item.slick-slide a section h3 {
   padding-left: 1rem;
   width: 40%;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   align-content: center;
   line-height: 1.6;
   letter-spacing: 1px;
+  text-overflow: ellipsis;
 }
 .news_class .verticalSlide .slick-dots {
   grid-row: 1/2;
@@ -320,9 +321,9 @@ nav ul li a:hover {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: auto auto;
-  height: 35rem;
-  padding: 1rem;
-  transform: translateX(-30px) translateY(-20px) scale(0.9);
+  height: 34rem;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  transform: translateX(-30px) translateY(-20px);
 }
 .videoSection > div .verticalSlideRight .cards a {
   all: unset;
@@ -357,7 +358,7 @@ nav ul li a:hover {
 .new_class_titfont {
   color: #ec5355;
   text-align: center;
-  font-size: 7rem;
+  font-size: 6rem;
   padding: 5rem 0 3rem 0;
   margin: 0;
   letter-spacing: 0.5rem;
