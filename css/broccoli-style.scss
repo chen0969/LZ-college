@@ -362,7 +362,7 @@ nav ul li a{
 .new_class_titfont {
     color: #ec5355;
     text-align: center;
-    font-size: 6rem;
+    font-size: 5.5rem;
     padding: 5rem 0 3rem 0;
     margin: 0;
     letter-spacing: 0.5rem;
@@ -545,6 +545,17 @@ footer{
 
 // mobile
 @media only screen and (max-width: 750px) {
+
+    .new_class_titfont{
+        font-size: 4rem;
+        padding: 4rem 1rem 3rem 1rem; 
+    }
+
+    .new_class_titfont.newsClassVer{
+        font-size: 4rem;
+        padding: 1rem;
+        transform: translateY(3.5rem);
+    }
     main{
         transition: 0.5s;
     }
